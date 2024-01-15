@@ -15,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+DB::listen(function ($query) {
+    dump($query->sql);
+});
 
 Route::view('/', 'welcome')->name('welcome');
 

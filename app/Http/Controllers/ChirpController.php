@@ -13,7 +13,7 @@ class ChirpController extends Controller
     public function index()
     {
         return view('chirps.index', [
-            'chirps' => Chirp::latest()->get(), // Same than Chirp::orderBy('created_at', 'desc')->get()
+            'chirps' => Chirp::with('user')->latest()->get(), // Neccesary for resolve the N+1 problem
         ]);
     }
 
