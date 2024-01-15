@@ -12,7 +12,9 @@ class ChirpController extends Controller
      */
     public function index()
     {
-        return view('chirps.index');
+        return view('chirps.index', [
+            'chirps' => Chirp::latest()->get(), // Same than Chirp::orderBy('created_at', 'desc')->get()
+        ]);
     }
 
     /**
