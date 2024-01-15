@@ -15,7 +15,14 @@
                             name="message" 
                             class="block w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
                             placeholder="{{ __('What\'s happening?') }}"
-                            ></textarea>
+                            >{{ old('message' )}}</textarea>
+                        <x-input-error :messages="$errors->get('message')" class="mt-2"/>
+                        <!-- 
+                            Otra forma de mostrar los errores 
+                            @error('message')
+                            <div class="text-red-500 mt-2">{{ $message }}</div>
+                            @enderror 
+                        -->
                         <x-primary-button class="mt-4">
                             {{ __('Chirp') }}
                         </x-primary-button>
