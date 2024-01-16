@@ -240,5 +240,8 @@
     "What's on your mind?": "¿Qué tienes en mente?",
     "Chirp created!": "Chirp creado!",
     "Edit Chirp": "Editar Chirp",
-    "edited": "editado"
+    "edited": "editado",
+    "Chirp updated!": "Chirp actualizado!",
+    "Chirp deleted!": "Chirp eliminado!",
+    "Delete Chirp": "Eliminar Chirp"
 }
